@@ -11,7 +11,7 @@ function Usuario() {
   const inputPassword = useRef()
 
   async function getUsers() {
-    const usersFromApi = await api.get('/user')
+    let usersFromApi = await api.get('/user')
 
     setUsers(usersFromApi.data)
   }

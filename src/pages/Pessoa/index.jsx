@@ -7,7 +7,6 @@ import Edit from '../../assets/edit.svg'
 import api from '../../services/api'
 
 function Pessoa() {
-  // let [pessoaUma, setPessoaUma] = useState({})
   const [pessoas, setPessoas] = useState([])
   const [cadastro, setCadastro] = useState(0)
 
@@ -72,7 +71,7 @@ function Pessoa() {
   }
 
   async function getPessoas() {
-    const pessoasFromApi = await api.get('/pessoa')
+    let pessoasFromApi = await api.get('/pessoa')
 
     setPessoas(pessoasFromApi.data)
   }
@@ -134,7 +133,6 @@ function Pessoa() {
                 </div>
                 <div className="buttons">
                   <button className="butRow" onClick={() => {
-                    // telaAlteraPessoa(pessoa)
                     telaAlteraPessoa({
                       id: pessoa.id, nome: pessoa.nome, email: pessoa.email, cliente: pessoa.cliente,
                       fornecedor: pessoa.fornecedor, ativo: pessoa.ativo, status: pessoa.status

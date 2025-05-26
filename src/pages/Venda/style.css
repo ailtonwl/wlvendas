@@ -39,7 +39,7 @@ form {
     font-size: 14px;
   }
 
-  & button:hover {
+  :is(button:hover) {
     opacity: 0.8;
   }
 
@@ -79,7 +79,7 @@ form {
       cursor: pointer;
     }
 
-    &button:hover {
+    :is(button:hover) {
       opacity: 0.6;
     }
   }

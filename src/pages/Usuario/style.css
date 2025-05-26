@@ -33,7 +33,7 @@ form {
     font-size: 14px;
   }
 
-  & button:hover {
+  :is(button:hover) {
     opacity: 0.8;
   }
 
@@ -47,6 +47,11 @@ form {
     padding-left: 10px;
     padding-right: 10px;
     outline: none;
+  }
+
+  & label {
+    color: #c5c4c4;
+    font-size: 12px;
   }
 }
 
@@ -73,7 +78,7 @@ form {
       cursor: pointer;
     }
 
-    &button:hover {
+    :is(button:hover) {
       opacity: 0.6;
     }
   }

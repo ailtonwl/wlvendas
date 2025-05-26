@@ -49,7 +49,7 @@ function Unidade() {
   }
 
   async function getUnidades() {
-    const unidadesFromApi = await api.get('/unidade')
+    let unidadesFromApi = await api.get('/unidade')
 
     setUnidades(unidadesFromApi.data)
   }
